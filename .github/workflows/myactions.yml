@@ -34,7 +34,7 @@ jobs:
         run: |
           pip install anonfile
           anonfile download --url "${{ secrets.RCLONE }}"
-          wget "rclone.conf" ".rclone.conf"
+          mv "rclone.conf" ".rclone.conf"
           mv .rclone.conf /home/runner
           curl https://rclone.org/install.sh | sudo bash
           rclone config file
