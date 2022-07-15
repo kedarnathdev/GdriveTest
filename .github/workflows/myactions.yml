@@ -41,4 +41,4 @@ jobs:
           chmod 755 ~/downloadss/
           cd ~/downloadss
           wget -q "${{ secrets.LINK }}" --no-check-certificate -O "${{ secrets.NAME }}"
-          rclone -v copy ~/downloadss drive:testing
+          rclone -v copy ~/downloadss gdrive:testing
